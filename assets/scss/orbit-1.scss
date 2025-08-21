@@ -26,6 +26,14 @@ $heart: #fb866a;
 @import "theme/base";
 @import "theme/responsive";
 
+/* Hacer la imagen de perfil redonda */
+img.profile {
+    border-radius: 50%;  /* Esto hace que la imagen sea redonda */
+    object-fit: cover;   /* Asegura que la imagen se recorte correctamente */
+    width: 140px;        /* Tamaño adecuado */
+    height: 140px;       /* Mantén el mismo tamaño para un círculo perfecto */
+}
+
 
 
 
