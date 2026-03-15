@@ -20,8 +20,19 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/orbit-1.css">
     <style>
         @page {
-            size: A4 portrait;
+            size: letter;
             margin: 12mm;
+        }
+
+        /* Normalize profile image size on screen */
+        .profile {
+            max-width: 160px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 8px;
+            object-fit: cover;
         }
 
         @media print {
