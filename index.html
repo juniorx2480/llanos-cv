@@ -20,7 +20,7 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/orbit-1.css">
     <style>
         @page {
-            size: A4 landscape;
+            size: A4 portrait;
             margin: 12mm;
         }
 
@@ -37,9 +37,7 @@
             }
 
             .wrapper {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
+                display: block;
                 margin: 0;
                 padding: 0;
                 width: 100%;
@@ -47,7 +45,9 @@
             }
 
             .sidebar-wrapper {
-                width: 32%;
+                float: left;
+                width: 250px;
+                min-width: 250px;
                 background: #2b9bb5;
                 color: #fff;
                 padding: 20px 15px;
@@ -57,7 +57,7 @@
             }
 
             .main-wrapper {
-                width: 68%;
+                margin-left: 270px;
                 padding: 0 15px;
                 box-sizing: border-box;
             }
@@ -95,8 +95,12 @@
             }
 
             .profile {
-                max-width: 150px;
-                height: auto;
+                width: 120px !important;
+                height: 120px !important;
+                object-fit: cover;
+                border-radius: 8px;
+                display: block;
+                margin: 0 auto 15px;
             }
 
             /* Prevent breaking the sidebar into separate pages */
@@ -106,7 +110,6 @@
                 page-break-inside: avoid;
             }
         }
-    </style>
     </style>
 </head> 
 
