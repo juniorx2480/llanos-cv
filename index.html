@@ -18,6 +18,47 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/orbit-1.css">
+    <style>
+        @media print {
+            .sidebar-wrapper {
+                float: none;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .main-wrapper {
+                float: none;
+                width: 100%;
+            }
+            .download-container {
+                display: none;
+            }
+            body {
+                font-size: 12px;
+                color: #333;
+            }
+            .wrapper {
+                margin: 0;
+                padding: 0;
+            }
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+            .progress-bar {
+                background-color: #007bff !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            a {
+                color: #007bff;
+                text-decoration: none;
+            }
+            .profile {
+                max-width: 150px;
+                height: auto;
+            }
+        }
+    </style>
 </head> 
 
 <body>
