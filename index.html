@@ -20,37 +20,45 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/orbit-1.css">
     <style>
         @page {
-            size: auto;
-            margin: 15mm;
+            size: A4 landscape;
+            margin: 12mm;
         }
 
         @media print {
+            html, body {
+                height: auto;
+            }
+
             body {
-                font-size: 12px;
+                font-size: 11px;
                 color: #333;
                 -webkit-print-color-adjust: exact;
                 color-adjust: exact;
             }
 
             .wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
                 margin: 0;
                 padding: 0;
+                width: 100%;
+                box-sizing: border-box;
             }
 
             .sidebar-wrapper {
-                float: left;
                 width: 32%;
                 background: #2b9bb5;
                 color: #fff;
-                padding-bottom: 20px;
+                padding: 20px 15px;
                 -webkit-print-color-adjust: exact;
                 color-adjust: exact;
                 box-sizing: border-box;
             }
 
             .main-wrapper {
-                float: right;
-                width: 66%;
+                width: 68%;
+                padding: 0 15px;
                 box-sizing: border-box;
             }
 
@@ -63,12 +71,7 @@
                 margin-bottom: 18px;
             }
 
-            .section-title {
-                color: #0b4f5f;
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-            }
-
+            .section-title,
             .container-block-title {
                 color: #0b4f5f;
                 -webkit-print-color-adjust: exact;
@@ -96,9 +99,10 @@
                 height: auto;
             }
 
-            /* Avoid truncating the sidebar content on narrow pages */
+            /* Prevent breaking the sidebar into separate pages */
             .sidebar-wrapper,
-            .main-wrapper {
+            .main-wrapper,
+            .section {
                 page-break-inside: avoid;
             }
         }
@@ -110,7 +114,7 @@
     <div class="wrapper mt-lg-5">
         <div class="sidebar-wrapper">
             <div class="profile-container">
-                <img class="profile" src="assets/images/profile.png" alt="Photo of Julio Cesar Useche Llanos" />
+                <img class="profile" src="assets/images/profile.png?v=2" alt="Photo of Julio Cesar Useche Llanos" />
                 <h1 class="name">Julio Cesar Useche Llanos</h1>
                 <h3 class="tagline">Systems Engineering Student</h3>
             </div><!--//profile-container-->
